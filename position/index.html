@@ -19,16 +19,20 @@
             background: #09f;
             width: 100px;
             height: 100px;
+
             /* cuando ponemos position: absolute - se posiciona el elemento relativo, position-relative (padre), si es que no hay un elemento padre con relative, se posiciona de acuerdo al documento, su desplazamiento se da con top, right, left, bottom */
-            position: absolute;
+            /* position: absolute; */
+
             /* Para no poner las 4 posiciones, puedes colocar inset: 0 */
-            /* right: 0;
+            right: 0;
             top: 0;
-            bottom: 0;
-            left: 0; */
-            inset: 0;
+            /* inset: 0; */
+
             /* con el margin:auto lo centra porque el navegador ha detectado que tiene que tener la misma distancia por todos los sitios*/
             margin: auto;
+
+            /* position:fixed - parecido al absolute, pero no se mueve al hacer scroll, se queda fijo en la pantalla, su posición va ser relativa a la pantalla (viewport), no al padre o al documento como en el caso del absolute */
+            position: fixed;
         }
         body{
             background: rgb(188, 228, 255);
@@ -36,6 +40,16 @@
     </style>
 </head>
 <body>
+    <section class="parent">
+        <div class="container">
+            Container
+        </div>
+    </section>
+    <section class="parent">
+        <div class="container">
+            Container
+        </div>
+    </section>
     <section class="parent">
         <div class="container">
             Container
