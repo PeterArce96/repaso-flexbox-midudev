@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index</title>
+
+    <style>
+        /* Hay que tomar en cuenta que siempre por ponemos un elemento dentro de otro, el elemento dentro queda por fuera del otro, es decir por encima. Imaginemos un container con fondo blanco, y adentro del elemento container un elemento p con un texto, este texto tiene que estar adelante del container para que se pueda leer. */
+        .parent{
+            border: 5px solid #000;
+            width: 250px;
+            height: 500px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        /* si scrolleamos la página, el container del primer section queda por elcima del él, pero por debajo del segundo section porque no es su hijo, el segundo section tiene un nivel de z mayor */
+        .container{
+            background: #09f;
+            width: 150px;
+            height: 150px;
+            position: fixed;
+            /* ahora le ponemos un z-index: 2 a todos los .container para que ellos estén por delante de todos los section*/
+            z-index: 2;
+        }
+        body{
+            background: rgb(188, 228, 255);
+        }
+    </style>
+</head>
+<body>
+    <section class="parent">
+        <div class="container">
+            Container
+        </div>
+    </section>
+    <section class="parent">
+        <div class="container">
+            Container
+        </div>
+    </section>
+</body>
+</html>
