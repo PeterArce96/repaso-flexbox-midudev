@@ -21,8 +21,14 @@
             height: 100px;
             /* cuando ponemos position: absolute - se posiciona el elemento relativo, position-relative (padre), si es que no hay un elemento padre con relative, se posiciona de acuerdo al documento, su desplazamiento se da con top, right, left, bottom */
             position: absolute;
-            right: 0;
+            /* Para no poner las 4 posiciones, puedes colocar inset: 0 */
+            /* right: 0;
             top: 0;
+            bottom: 0;
+            left: 0; */
+            inset: 0;
+            /* con el margin:auto lo centra porque el navegador ha detectado que tiene que tener la misma distancia por todos los sitios*/
+            margin: auto;
         }
         body{
             background: rgb(188, 228, 255);
