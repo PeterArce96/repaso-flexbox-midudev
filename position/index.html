@@ -7,17 +7,22 @@
 
     <style>
         /* Las posiciones en css son por defecto "estática(static)" */
-        section{
+        .parent{
             border: 5px solid #000;
             width: 250px;
             height: 250px;
             box-sizing: border-box;
-            position: static;
+            /* position: relative- con esto creamos un punto relativo para que cualquiera de los hijos los tome como referencia */
+            position: relative;
         }
         .container{
             background: #09f;
             width: 100px;
             height: 100px;
+            /* cuando ponemos position: absolute - se posiciona el elemento relativo, position-relative (padre), si es que no hay un elemento padre con relative, se posiciona de acuerdo al documento, su desplazamiento se da con top, right, left, bottom */
+            position: absolute;
+            right: 0;
+            top: 0;
         }
         body{
             background: rgb(188, 228, 255);
@@ -25,7 +30,7 @@
     </style>
 </head>
 <body>
-    <section>
+    <section class="parent">
         <div class="container">
             Container
         </div>
