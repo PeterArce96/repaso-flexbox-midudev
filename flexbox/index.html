@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+
+        /* el display:flex siempre se usa en el contenedor o padre. Hace al padre flexible.
+        Por defecto el contenido se pone en FILA(row), con flex-direction: column se colocan en columna.
+        FLEX es UNIDIRECCIONAL, de UN solo eje. O son filas o son columnas*/
+
+        .parent{
+            display: flex;
+            /* flex-direction: row-reverse o column-reverse -> coloca los hijos al revés*/
+            flex-direction: row-reverse;
+        }
+        .item   {
+            border: 1px solid;
+            opacity: .9;
+            width: 100px;
+            height: 100px;
+            background: #09f;
+        }
+        .item:first-child{
+            background: yellow;
+        }
+        .item:last-child{
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <section class="parent">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </section>
+</body>
+</html>
