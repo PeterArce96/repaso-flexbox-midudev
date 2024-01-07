@@ -16,7 +16,10 @@
             /* flex-direction: row-reverse o column-reverse -> coloca los hijos al revés*/
             flex-direction: flex;
             /* direction: rtl (right to left) - para indicar la dirección en que fluye el texto,(rtl) que la lectura sea de derecha hacia izquierda. */
-            direction: rtl;
+            /* direction: rtl; */
+
+            /* writing-mode -> define si los renglones de texto se disponen horizontal o verticalmente y la dirección en que avanzan los bloques */
+            writing-mode: vertical-rl;
 
         }
         .item   {
@@ -37,7 +40,7 @@
 </head>
 <body>
     <section class="parent">
-        <div class="item">1</div>
+        <div class="item">primero</div>
         <div class="item">2</div>
         <div class="item">3</div>
     </section>
