@@ -14,7 +14,8 @@
         .parent{
             display: flex;
             /* flex-direction: row-reverse o column-reverse -> coloca los hijos al revés*/
-            flex-direction: row;
+            /* flex-direction: row; */
+
             /* direction: rtl (right to left) - para indicar la dirección en que fluye el texto,(rtl) que la lectura sea de derecha hacia izquierda. */
             /* direction: rtl; */
 
@@ -23,7 +24,10 @@
 
             /* flex-wrap ->  especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas. POR DEFECTO ES NOWRAP*/
             /* Si le ponemos wrap, le damos la posibilidad si los hijos no caben, que den un salto de línea */
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
+            /* Forma abreviada de utilizar flex-direction y flex-wrap (flex-flow) */
+            flex-flow: row wrap;
+
             border: 4px solid black;
             width: 200px;
 
