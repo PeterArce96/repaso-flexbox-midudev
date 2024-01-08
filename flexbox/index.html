@@ -43,17 +43,27 @@
             /*flex-grow: 0; -> los elementos NO crecen*/
             /*flex-shrink: 1; -> los elementos pueden reducir su tamaño más pequeño que su flex.basis*/
             /*flex-basis: auto; -> los elementos tienen un tamaño base en auto*/
-            flex-grow: 1;
+            /* flex-grow: 1;
             flex-shrink: 1;
-            flex-basis: 0;
+            flex-basis: 0; */
             /* al ponerle 1 al flex-grow hacemos que los hijos puedan crecer, flex-shrink los elementos se pueden reducir y el tamaño es automático por flex-basis. Por lo tanto va ocupar todo el espacio que tenga disponible. */
             /* Si le ponemos flex-basis:0 hacemos que todos los hijos tengan el mismo ancho */
+            /* Estás medidas tienen un atajo solo con el flex: 1 */
+            flex: 1;
         }
         .item:first-child{
             background: yellow;
+            /* el primero tiene 4 veces el espacio del último */
+            flex: 4;
+        }
+        .item:nth-child(2){
+            background-color: #09f;
+            /* el segundo tien el doble del espacio del último */
+            flex: 2;
         }
         .item:last-child{
             background-color: red;
+            flex: 1;
         }
     </style>
 
