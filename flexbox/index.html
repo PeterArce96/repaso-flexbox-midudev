@@ -26,7 +26,7 @@
             /* Si le ponemos wrap, le damos la posibilidad si los hijos no caben, que den un salto de línea */
             /* flex-wrap: wrap; */
             /* Forma abreviada de utilizar flex-direction y flex-wrap (flex-flow) */
-            flex-flow: row wrap;
+            flex-flow: row nowrap;
 
             border: 4px solid black;
             width: 200px;
@@ -34,10 +34,20 @@
         }
         .item   {
             border: 1px solid;
+            box-sizing: border-box;
             opacity: .9;
-            width: 100px;
-            height: 100px;
+            height: 200px;
             background: #09f;
+
+            /* Contolar espacio de los elementos (VALORES POR DEFECTO) Se colocan en los elementos hijos*/
+            /*flex-grow: 0; -> los elementos NO crecen*/
+            /*flex-shrink: 1; -> los elementos pueden reducir su tamaño más pequeño que su flex.basis*/
+            /*flex-basis: auto; -> los elementos tienen un tamaño base en auto*/
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0;
+            /* al ponerle 1 al flex-grow hacemos que los hijos puedan crecer, flex-shrink los elementos se pueden reducir y el tamaño es automático por flex-basis. Por lo tanto va ocupar todo el espacio que tenga disponible. */
+            /* Si le ponemos flex-basis:0 hacemos que todos los hijos tengan el mismo ancho */
         }
         .item:first-child{
             background: yellow;
