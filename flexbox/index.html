@@ -55,15 +55,19 @@
             background: yellow;
             /* el primero tiene 4 veces el espacio del último */
             flex: 4;
+            /* el order especifica el orden utilizado para disponer los elementos en su contenedor flexible, mientras menor el número, se muestra primero */
+            order: 3;
         }
         .item:nth-child(2){
             background-color: #09f;
             /* el segundo tien el doble del espacio del último */
             flex: 2;
+            order: 1;
         }
         .item:last-child{
             background-color: red;
             flex: 1;
+            order: 2;
         }
     </style>
 
